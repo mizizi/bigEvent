@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/lib/layui/css/layui.css">
+
+</head>
+
+<body>
+    <!-- 卡片区域 -->
+    <div class="layui-card">
+        <div class="layui-card-header">文章列表</div>
+        <div class="layui-card-body">
+            <!-- 下拉选择框 -->
+            <form class="layui-form" id="form-search">
+                <div class="layui-form-item layui-inline">
+                    <select name="cate_id" id="choicecate"></select>
+                </div>
+                <div class="layui-form-item layui-inline">
+                    <select name="state" id="choicestate">
+                        <option value="">所有状态</option>
+                        <option value=1>已发布</option>
+                        <option value=0>草稿</option>
+                    </select>
+                </div>
+                <div class="layui-form-item layui-inline">
+                    <button class="layui-btn" lay-submit lay-filter="formDemo">筛选</button>
+                </div>
+            </form>
+            <!-- 列表区域 -->
+            <table class="layui-table">
+                <colgroup>
+                    <col width="50" />
+                    <col width="200" />
+                    <col width="50" />
+                    <col width="50" />
+                    <col width="50" />
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>内容</th>
+                        <th>作者</th>
+                        <th>创建时间</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <!-- 分页区域 -->
+            <div id="pageBox"></div>
+        </div>
+    </div>
+    <script type="text/html" id="tpl-table">
+        {{each result}}
+        <tr>
+          <td>{{$value.id}}</td>
+          <td>{{$value.content}}</td>
+          <td>{{$value.author.name}}</td>
+          <td>{{$value.creteTime}}</td>
+          <td>
+            <button type="button" class="layui-btn layui-btn-xs" id="edit">编辑</button>
+            <button type="button" class="layui-btn layui-btn-danger layui-btn-xs" id="delete">删除</button>
+          </td>
+        </tr>
+        {{/each}}
+      </script>
+    <script type="text/html" id="tpl-cate">
+        <option value="">所有分类</option>
+        {{each}}
+        <option value="{{$value.category}}">{{$value.name}}</option>
+        {{/each}}
+      </script>
+    <script src="../assets/lib/layui/layui.all.js"></script>
+    <script src="../assets/lib/jquery.js"></script>
+    <script src="../assets/js/baseApi.js"></script>
+    <script src="../assets/lib/template-web.js"></script>
+    <script src="../assets/js/article/articlelist.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>layout 管理系统大布局 - Layui</title>
+    <link rel="stylesheet" href="../assets/lib/layui/css/layui.css">
+    <link rel="stylesheet" href="../assets/css/index.css">
+    <link rel="stylesheet" href="../assets/fonts/iconfont.css">
+</head>
+
+<body>
+    <div class="layui-layout layui-layout-admin">
+        <div class="layui-header">
+            <div class="layui-logo layui-hide-xs layui-bg-black" id="logo">
+                <img src="../assets/images/logo.png" alt="">
+            </div>
+            <ul class="layui-nav layui-layout-right">
+                <li class="layui-nav-item layui-hide layui-show-md-inline-block">
+                    <a href="javascript:;">
+                        <img src="../assets/images/sample.jpg" class="layui-nav-img">
+                        <div class="text-avatar"></div>
+                        个人中心
+                    </a>
+                    <dl class="layui-nav-child">
+                        <dd> <a href="../users/user_info.html" target="fm">基本资料</a></dd>
+                        <dd><a href="../users/user_headimg.html" target="fm">更换头像</a></dd>
+                        <dd> <a href="../users/user_changepassword.html" target="fm">重置密码</a></dd>
+                    </dl>
+                </li>
+                <li class=" layui-nav-item" lay-header-event="menuRight" lay-unselect>
+                    <a href="javascript:;" id="exit">
+                        <span class="iconfont icon-tuichu"></span>退出
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="layui-side layui-bg-black">
+            <div class="layui-side layui-bg-black">
+                <div class="layui-side-scroll">
+                    <div class="user-info-box">
+                        <img src="../assets/images/sample.jpg" class="layui-nav-img">
+                        <div class="text-avatar"></div>
+                        <span class="welcome">&nbsp;欢迎&nbsp; mizi123</span>
+                    </div>
+                    <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+                    <ul class="layui-nav layui-nav-tree" lay-shrink='all'>
+                        <li class="layui-nav-item layui-this">
+                            <a href="./dashboard.html" target="fm"> <span class="iconfont icon-home"></span>首页</a>
+                        </li>
+                        <li class="layui-nav-item">
+                            <a class="" href="javascript:;"> <span class="iconfont icon-16"></span>文章管理</a>
+                            <dl class="layui-nav-child">
+                                <dd>
+                                    <a href="../article/category.html" target="fm"><i
+                                            class="layui-icon layui-icon-app"></i>文章类别</a>
+                                </dd>
+                                <dd>
+                                    <a href="../article/ariclelist.html" target="fm"><i
+                                            class="layui-icon layui-icon-app"></i>文章列表</a>
+                                </dd>
+                                <dd>
+                                    <a href="../article/pubulisharticle.html" target="fm"><i
+                                            class="layui-icon layui-icon-add-1"></i>发布文章</a>
+                                </dd>
+                            </dl>
+                        </li>
+                        <li class="layui-nav-item">
+                            <a href="javascript:;"> <span class="iconfont icon-user"></span>个人中心</a>
+                            <dl class="layui-nav-child">
+                                <dd>
+                                    <a href="../users/user_info.html" target="fm"><i
+                                            class="layui-icon layui-icon-app"></i>基本信息</a>
+                                </dd>
+                                <dd>
+                                    <a href="../users/user_headimg.html" target="fm"><i
+                                            class="layui-icon layui-icon-app"></i>更换头像</a>
+                                </dd>
+                                <dd>
+                                    <a href="../users/user_changepassword.html" target="fm"><i
+                                            class="layui-icon layui-icon-app"></i>重置密码</a>
+                                </dd>
+                            </dl>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="layui-body">
+            <!-- 内容主体区域 -->
+            <div style="padding: 15px;">
+                <iframe src="./dashboard.html" frameborder="0" name="fm"></iframe>
+            </div>
+        </div>
+        <div class="layui-footer">
+            <!-- 底部固定区域 -->
+            1571883349@qq.com @米滋
+        </div>
+    </div>
+    <script src="../assets/lib/layui/layui.all.js"></script>
+    <script src="../assets/lib/jquery.js"> </script>
+    <script src="../assets/js/baseApi.js"></script>
+    <script src="../assets/js/index.js"></script>
+    <script src="../assets/js/setHeadPic.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+.layui-card-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+form{
+    text-align: center;
+}
+.layui-input{
+    width: 80%;
+}

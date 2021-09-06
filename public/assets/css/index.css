@@ -1,0 +1,44 @@
+.user-info-box {
+    line-height: 70px;
+    width: 200px;
+    text-align: center;
+    user-select: none;
+    border-bottom: 1px solid #23262e;
+}
+.text-avatar {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: #009688;
+    border-radius: 50%;
+    line-height: 40px;
+    text-align: center;
+    color: #fff;
+}
+.welcome{
+    font-size: 12px;
+}
+#logo{
+    background-color: #23262e;
+}
+.layui-footer{
+    text-align: center;
+    font-size: 12px;
+}
+.iconfont{
+    margin-right: 10px;
+}
+.layui-icon{
+    margin-right: 10px;
+}
+iframe{
+    width: 100%;
+    height: 83vh;
+}
+.layui-body {
+    overflow: hidden;
+    background: #ccc;
+}
+a{
+    transition: none !important;
+}
